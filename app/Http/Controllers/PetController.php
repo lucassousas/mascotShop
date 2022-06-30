@@ -13,7 +13,7 @@ class PetController extends Controller
     {
         $pets = DB::table("pet AS p")
                     ->join("especie AS e", "p.especie_id", "=", "e.id")
-                    ->select("p.nome", "e.raca", "p.sexo", "p.dono")
+                    ->select("p.id", "p.nome", "e.raca", "p.sexo", "e.especie","p.idade", "p.dono")
                     ->orderByDesc("p.created_at")
                     ->get();
                     
@@ -46,6 +46,7 @@ class PetController extends Controller
         $pet->nome = $request->get("nome");
         $pet->dataNasc = $request->get("dataNasc");
         $pet->sexo = $request->get("sexo");
+        $pet->idade = $request->get("idade");
         $pet->dono = $request->get("dono");
         $pet->especie_id = $request->get("especie_id");
 
@@ -57,7 +58,7 @@ class PetController extends Controller
         $pet->save();
         $request->session()->flash("status", "salvo");
         
-        return redirect("/pet/" . $pet->id . "/edit");
+        return redirect("/pet");
     }
 
     public function edit($id)

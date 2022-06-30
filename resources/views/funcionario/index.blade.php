@@ -50,9 +50,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			@foreach ($especies as $especie)
+			@foreach ($funcionarios as $funcionario)
 				<tr>
-					<td class="td_especie">{{ $especie->especie }}</td>
+					<td class="td_nome">{{ $funcionario->especie }}</td>
 					<td class="td_raca">{{ $especie->raca }}</td>
 					<td class="td_definicao">{{ $especie->definicao }}</td>
 					<td>
