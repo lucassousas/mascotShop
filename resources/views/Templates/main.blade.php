@@ -44,6 +44,7 @@
 					<a class="nav-link" href="/pet">Pets</a>
 					<a class="nav-link" href="/produtos">Produtos</a>
 					<a class="nav-link" href="/servico">Serviços</a>
+					<a class="nav-link" href="/especie">Espécies</a>
 					<a class="nav-link" href="/funcionario">Funcionários</a>
 					<a class="nav-link" href="/venda">Venda</a>
 					<a class="nav-link" href="/aniversario">Aniversariantes</a>
